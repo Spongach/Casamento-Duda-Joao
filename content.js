@@ -8,7 +8,7 @@ export const CONTENT = {
   fase: "antes",
 
   noivos: "Maria & João",
-  dataISO: "2027-01-01T09:00:00-03:00", // [PLACEHOLDER] data e hora da cerimônia
+  dataISO: "2027-10-10T17:00:00-03:00", // [PLACEHOLDER] data e hora da cerimônia
   dataTexto: "[DATA POR EXTENSO]",
   frase: "[FRASE OU VERSÍCULO DE ABERTURA]",
   textoBoasVindas: "[TEXTO DE BOAS-VINDAS AOS CONVIDADOS]",
