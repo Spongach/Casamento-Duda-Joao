@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmar presença</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <main class="secao" id="conteudo">
+    <h1 id="titulo" class="titulo-pagina"></h1>
+    <p id="texto" class="texto-centro"></p>
+    <form id="formRsvp" class="form">
+      <input id="rsvpNome" placeholder="Seu nome completo" maxlength="100" required>
+      <fieldset class="opcoes">
+        <label><input type="radio" name="vai" value="sim" required> Vou com muita alegria</label>
+        <label><input type="radio" name="vai" value="nao"> Infelizmente não poderei ir</label>
+      </fieldset>
+      <div id="blocoAcomp" hidden>
+        <label for="qtdAcomp">Acompanhantes</label>
+        <select id="qtdAcomp"></select>
+        <div id="nomesAcomp" class="form"></div>
+      </div>
+      <input id="rsvpRestricao" placeholder="Restrição alimentar (opcional)" maxlength="200">
+      <textarea id="rsvpRecado" placeholder="Recado pra gente (opcional)" maxlength="500" rows="3"></textarea>
+      <input id="rsvpSite" class="isca" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit">Confirmar</button>
+      <p id="rsvpStatus" class="status" role="status"></p>
+    </form>
+  </main>
+
+  <footer id="rodape"></footer>
+  <script type="module" src="js/pages/rsvp.js"></script>
+</body>
+</html>

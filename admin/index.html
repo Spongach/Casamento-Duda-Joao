@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin — Nosso Casamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/logo.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin">
+  <!-- Login -->
+  <section id="telaLogin" class="login">
+    <h1>Área dos noivos</h1>
+    <form id="formLogin">
+      <input type="email" id="loginEmail" placeholder="E-mail" required autocomplete="username">
+      <input type="password" id="loginSenha" placeholder="Senha" required autocomplete="current-password">
+      <button type="submit">Entrar</button>
+      <p id="loginErro" class="erro" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- Painel -->
+  <div id="telaPainel" hidden>
+    <header class="admin__topo">
+      <strong>Painel do casamento</strong>
+      <nav class="abas">
+        <button data-aba="planilha" class="ativa">Planilha</button>
+        <button data-aba="ideias">Ideias</button>
+        <button data-aba="presentes">Presentes</button>
+        <button data-aba="rsvp">Confirmações</button>
+        <button data-aba="recados">Recados</button>
+        <button data-aba="achados">Achados</button>
+      </nav>
+      <button id="btnSair" class="sec">Sair</button>
+    </header>
+
+    <main class="admin__corpo">
+      <!-- Planilha -->
+      <section id="aba-planilha" class="aba">
+        <a id="linkPlanilha" class="cartao-planilha" target="_blank" rel="noopener">
+          <span class="icone">📊</span>
+          <strong>Planilha do casamento</strong>
+          <small>Abrir no Google Sheets ↗</small>
+        </a>
+      </section>
+
+      <!-- Ideias -->
+      <section id="aba-ideias" class="aba" hidden>
+        <h2>Ideias</h2>
+        <form id="formIdeia" class="form">
+          <input id="ideiaTitulo" placeholder="Título da ideia" required>
+          <textarea id="ideiaDescricao" placeholder="Detalhes (opcional)" rows="3"></textarea>
+          <button type="submit">Adicionar ideia</button>
+        </form>
+        <ul id="listaIdeias" class="lista"></ul>
+      </section>
+
+      <!-- Presentes -->
+      <section id="aba-presentes" class="aba" hidden>
+        <h2>Presentes</h2>
+        <p class="dica">Tudo entra como <b>rascunho</b>. Só aparece para os convidados depois de clicar em “Publicar”.</p>
+        <form id="formPresente" class="form">
+          <input id="presNome" placeholder="Nome do presente (ex: Chaleira elétrica)" required>
+          <input id="presImagem" type="url" placeholder="Link da foto (URL da imagem)">
+          <input id="presLink" type="url" placeholder="Link de compra online">
+          <textarea id="presDescricao" placeholder="Descrição do produto" rows="2"></textarea>
+          <textarea id="presMotivo" placeholder="Por que queremos esse presente?" rows="2"></textarea>
+          <button type="submit">Salvar rascunho</button>
+        </form>
+        <h3>Rascunhos</h3>
+        <ul id="listaRascunhos" class="lista"></ul>
+        <h3>Publicados (visíveis aos convidados)</h3>
+        <ul id="listaPublicados" class="lista"></ul>
+      </section>
+
+      <!-- Confirmações (RSVP) -->
+      <section id="aba-rsvp" class="aba" hidden>
+        <h2>Confirmações de presença</h2>
+        <div class="resumo" id="resumoRsvp"></div>
+        <div class="linha-acoes">
+          <button id="btnCsv" type="button">Exportar CSV (Excel/Sheets)</button>
+        </div>
+        <ul id="listaRsvp" class="lista"></ul>
+      </section>
+
+      <!-- Recados -->
+      <section id="aba-recados" class="aba" hidden>
+        <h2>Mural de recados</h2>
+        <h3>Aguardando aprovação</h3>
+        <ul id="listaRecadosPendentes" class="lista"></ul>
+        <h3>Aprovados (visíveis no site)</h3>
+        <ul id="listaRecadosAprovados" class="lista"></ul>
+      </section>
+
+      <!-- Achados e perdidos -->
+      <section id="aba-achados" class="aba" hidden>
+        <h2>Achados e perdidos</h2>
+        <form id="formAchado" class="form">
+          <input id="achTitulo" placeholder="O que foi achado? (ex: Casaco preto)" required>
+          <input id="achImagem" type="url" placeholder="Link da foto (opcional)">
+          <textarea id="achDescricao" placeholder="Descrição (opcional)" rows="2"></textarea>
+          <button type="submit">Adicionar item</button>
+        </form>
+        <h3>No site (não entregues)</h3>
+        <ul id="listaAchadosAbertos" class="lista"></ul>
+        <h3>Entregues</h3>
+        <ul id="listaAchadosEntregues" class="lista"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

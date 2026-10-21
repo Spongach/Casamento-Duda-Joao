@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <header class="hero">
+    <img class="hero__logo" src="assets/logo.jpg" alt="Monograma M e J dos noivos">
+    <p class="hero__frase" id="frase"></p>
+    <h1 id="noivos"></h1>
+    <p id="data"></p>
+    <div class="contador" id="contador" aria-live="polite"></div>
+    <p id="agradecimento" class="agradecimento" hidden></p>
+  </header>
+
+  <main id="conteudo">
+    <section class="secao texto-centro">
+      <p id="boasVindas"></p>
+    </section>
+
+    <section class="secao local">
+      <img id="localFoto" alt="Foto do local">
+      <h2 id="localNome"></h2>
+      <p id="localEndereco"></p>
+      <p id="localAviso" class="destaque" hidden></p>
+      <div class="botoes">
+        <a id="btnMaps" class="botao" hidden>Abrir no Google Maps</a>
+        <a id="btnWaze" class="botao sec" hidden>Abrir no Waze</a>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="caixinhas" id="caixinhas"></div>
+    </section>
+
+    <section class="secao texto-centro" id="traje">
+      <h2 id="trajeTitulo"></h2>
+      <p id="trajeTexto"></p>
+      <p id="trajeEvitar" class="destaque"></p>
+      <p><a id="trajePinterest" class="botao sec" hidden>Inspirações no Pinterest</a></p>
+    </section>
+  </main>
+
+  <footer id="rodape"></footer>
+  <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>
